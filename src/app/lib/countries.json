@@ -1,0 +1,94 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Las Vegas, NV, USA",
+      "country": "United States",
+      "region": "North America"
+    },
+    {
+      "id": 2,
+      "name": "Paris, France",
+      "country": "France",
+      "region": "Europe"
+    },
+    {
+      "id": 3,
+      "name": "Berlin, Germany",
+      "country": "Germany",
+      "region": "Europe"
+    },
+    {
+      "id": 4,
+      "name": "Tokyo, Japan",
+      "country": "Japan",
+      "region": "Asia"
+    },
+    {
+      "id": 5,
+      "name": "Sydney, Australia",
+      "country": "Australia",
+      "region": "Oceania"
+    },
+    {
+      "id": 6,
+      "name": "London, United Kingdom",
+      "country": "United Kingdom",
+      "region": "Europe"
+    },
+    {
+      "id": 7,
+      "name": "New York, NY, USA",
+      "country": "United States",
+      "region": "North America"
+    },
+    {
+      "id": 8,
+      "name": "Dubai, United Arab Emirates",
+      "country": "United Arab Emirates",
+      "region": "Middle East"
+    },
+    {
+      "id": 9,
+      "name": "Bangkok, Thailand",
+      "country": "Thailand",
+      "region": "Asia"
+    },
+    {
+      "id": 10,
+      "name": "Barcelona, Spain",
+      "country": "Spain",
+      "region": "Europe"
+    },
+    {
+      "id": 11,
+      "name": "Rome, Italy",
+      "country": "Italy",
+      "region": "Europe"
+    },
+    {
+      "id": 12,
+      "name": "Cancun, Mexico",
+      "country": "Mexico",
+      "region": "North America"
+    },
+    {
+      "id": 13,
+      "name": "Amsterdam, Netherlands",
+      "country": "Netherlands",
+      "region": "Europe"
+    },
+    {
+      "id": 14,
+      "name": "Istanbul, Turkey",
+      "country": "Turkey",
+      "region": "Europe/Asia"
+    },
+    {
+      "id": 15,
+      "name": "Singapore",
+      "country": "Singapore",
+      "region": "Asia"
+    }
+  ]
+}
