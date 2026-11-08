@@ -5,7 +5,6 @@ export default function Header() {
   return (
     <header className="border-b bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
           🌍 AI Traveler
@@ -18,7 +17,7 @@ export default function Header() {
             className="text-sm font-medium text-muted-foreground hover:text-foreground "
           >
             Trips
-          </Link>
+          </Link> 
 
           <ThemeToggle />
         </nav>

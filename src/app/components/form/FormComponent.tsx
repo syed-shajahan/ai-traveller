@@ -11,16 +11,16 @@ type Form = {
 
 const FormComponent = () => {
   const [form, setForm] = useState<Form>({
-    destination: "can be any destination",
-    duration: "any duration",
-    budget: "any buget",
+    destination: "",
+    duration: "",
+    budget: "",
   });
 
   const handleChange = (
     key: keyof Form,
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>,
   ) => {
-    const { value } = e.target;
+    const { value } = e.target;  
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -43,7 +43,7 @@ const FormComponent = () => {
             className="w-full px-4 py-3 border border-neutral-300 rounded-md text-black bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">Select a destination...</option>
-            {countriesData.countries.map((country) => (
+               {countriesData.countries.map((country) => (
               <option key={country.id} value={country.name}>
                 {country.name}
               </option>
@@ -52,7 +52,7 @@ const FormComponent = () => {
         </div>
         {/* Trip Duration Input */}
         <div className="space-y-2">
-          <label className="block text-sm font-medium">
+          <label className="block text-sm font-medium"> 
             How many days are you planning your trip?
           </label>
           <input
@@ -64,53 +64,52 @@ const FormComponent = () => {
           />
         </div>
         {/* Budget Selection */}
-        {/* <div className="space-y-3">
-        <label className="block text-sm font-medium">
-          What is Your Budget?
-        </label>
-        <div className="grid grid-cols-3 gap-3">
-          <button
-            onClick={}
-            className={`p-4 border rounded-lg text-center transition-colors ${
-              budget === "cheap"
-                ? "border-blue-500 bg-blue-50"
-                : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
-            }`}
-          >
-            <div className="text-3xl mb-2">💰</div>
-            <h3 className="font-semibold text-sm">Cheap</h3>
-            <p className="text-xs text-gray-600 mt-1">
-              Stay conscious of costs
-            </p>
-          </button>
-          <button
-            onClick={}
-            className={`p-4 border rounded-lg text-center transition-colors ${
-              budget === "moderate"
-                ? "border-blue-500 bg-blue-50"
-                : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
-            }`}
-          >
-            <div className="text-3xl mb-2">💵</div>
-            <h3 className="font-semibold text-sm">Moderate</h3>
-            <p className="text-xs text-gray-600 mt-1">
-              Keep cost on the average side 
-            </p>
-          </button>
-          <button
-            onClick={}
-            className={`p-4 border rounded-lg text-center transition-colors ${
-              budget === "luxury"
-                ? "border-blue-500 bg-blue-50"
-                : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
-            }`}
-          >
-            <div className="text-3xl mb-2">💸</div>
-            <h3 className="font-semibold text-sm">Luxury</h3>
-            <p className="text-xs text-gray-600 mt-1">Don't worry about cost</p>
-          </button>
+        <div className="space-y-3">
+          <label className="block text-sm font-medium">What is Your Budget?</label>
+          <div className="grid grid-cols-3 gap-3">
+            <button
+              type="button"
+              onClick={() => setForm((prev) => ({ ...prev, budget: "cheap" }))} 
+                className={`p-4 border rounded-lg text-center transition-colors ${
+                form.budget === "cheap"
+                  ? "border-blue-500 bg-blue-50"
+                  : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
+              }`}
+            >
+              <div className="text-3xl mb-2">💰</div>
+              <h3 className="font-semibold text-sm">Cheap</h3>
+              <p className="text-xs text-gray-600 mt-1">Stay conscious of costs</p>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setForm((prev) => ({ ...prev, budget: "moderate" }))}
+              className={`p-4 border rounded-lg text-center transition-colors ${
+                form.budget === "moderate"
+                  ? "border-blue-500 bg-blue-50"
+                  : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
+              }`}
+            >
+              <div className="text-3xl mb-2">💵</div>
+              <h3 className="font-semibold text-sm">Moderate</h3>
+              <p className="text-xs text-gray-600 mt-1">Keep cost on the average side</p>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setForm((prev) => ({ ...prev, budget: "luxury" }))}
+              className={`p-4 border rounded-lg text-center transition-colors ${
+                form.budget === "luxury"
+                  ? "border-blue-500 bg-blue-50"
+                  : "border-neutral-300 hover:border-blue-500 hover:bg-blue-50"
+              }`}
+            >
+              <div className="text-3xl mb-2">💸</div>
+              <h3 className="font-semibold text-sm">Luxury</h3>
+              <p className="text-xs text-gray-600 mt-1">Don't worry about cost</p>
+            </button>
+          </div>
         </div>
-      </div> */}
       </div>
       <Button type="submit" className="w-full">
         Submit
